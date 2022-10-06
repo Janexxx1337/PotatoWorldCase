@@ -1,0 +1,292 @@
+img, video {
+	max-width: inherit !important;
+}
+
+#minting_dapp {
+	@apply w-full;
+}
+
+#minting-dapp {
+	@apply flex flex-col gap-6;
+  @apply mt-6 mx-auto;
+  @apply w-full;
+  @apply max-w-md;
+}
+
+#minting-dapp .no-wallet {
+	@apply flex flex-col;
+    @apply px-4 py-6;
+    @apply rounded-lg;
+    @apply text-popups-txt;
+    @apply bg-popups-bg;
+    @apply shadow;
+}
+
+#minting-dapp .no-wallet .use-block-explorer:not(:first-child) {
+	@apply mt-3;
+}
+
+#minting-dapp .no-wallet .use-block-explorer:not(:first-child)::before {
+	content: '';
+	@apply block;
+      @apply mx-auto my-3;
+      @apply w-12;
+      @apply border-t-2 border-popups-internal_border;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address {
+	@apply flex flex-col;
+      @apply mt-4;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address h2 {
+	@apply font-semibold;
+        @apply text-xl text-center;
+        color: #f8fafc;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address p {
+	@apply mt-3;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address .feedback-message {
+	@apply rounded-lg;
+        @apply mt-4;
+        @apply p-3;
+        @apply text-wl_message-txt text-sm;
+        @apply bg-wl_message-bg;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address input {
+	@apply rounded-t-lg;
+        @apply rounded-b-none;
+}
+
+#minting-dapp .no-wallet .merkle-proof-manual-address button {
+	@apply rounded-b-lg;
+        @apply rounded-t-none;
+        @apply border-t-0;
+}
+
+#minting-dapp .collection-not-ready {
+	@apply flex items-center justify-center;
+    @apply px-6 py-4;
+    @apply rounded-lg;
+    @apply text-popups-txt text-sm;
+    @apply bg-popups-bg;
+    @apply shadow;
+}
+
+#minting-dapp .collection-not-ready .spinner {
+	@apply inline;
+      @apply -ml-1 mr-3 h-8 w-8 text-loading_spinner;
+      @apply animate-spin;
+}
+
+#minting-dapp .collection-status {
+	@apply grid sm: grid-cols-2 auto-rows-min;
+	@apply rounded-lg;
+    @apply font-mono;
+    @apply text-popups-txt text-sm;
+    @apply bg-popups-bg;
+    @apply shadow;
+}
+
+#minting-dapp .collection-status > * {
+	@apply flex flex-col items-center;
+      @apply px-6 py-4;
+}
+
+#minting-dapp .collection-status > * .label {
+	@apply text-xs text-label;
+}
+
+#minting-dapp .collection-status .user-address {
+	@apply sm: col-span-2;
+	@apply overflow-hidden;
+      @apply border-b border-popups-internal_border;
+}
+
+#minting-dapp .collection-status .user-address .address {
+	@apply w-full;
+        @apply font-semibold;
+        @apply truncate;
+        @apply text-center;
+}
+
+#minting-dapp .collection-status .supply .label, #minting-dapp .collection-status .current-sale .label {
+	@apply block;
+      @apply font-semibold;
+}
+
+#minting-dapp .collection-status .supply.supply, #minting-dapp .collection-status .current-sale.supply {
+	@apply border-b sm: border-b-0 sm:border-r border-popups-internal_border;
+}
+
+#minting-dapp .cannot-mint, #minting-dapp .not-mainnet, #minting-dapp .collection-sold-out {
+	@apply rounded-lg;
+    @apply px-6 py-4;
+    @apply text-popups-txt text-center;
+    @apply bg-popups-bg;
+    @apply shadow;
+}
+
+#minting-dapp .cannot-mint.cannot-mint .emoji, #minting-dapp .not-mainnet.cannot-mint .emoji, #minting-dapp .collection-sold-out.cannot-mint .emoji {
+	@apply block;
+      @apply text-4xl;
+}
+
+#minting-dapp .cannot-mint.not-mainnet, #minting-dapp .not-mainnet.not-mainnet, #minting-dapp .collection-sold-out.not-mainnet {
+	@apply text-warning-txt;
+      @apply bg-warning-bg;
+      @apply border border-warning-border;
+}
+
+#minting-dapp .cannot-mint.not-mainnet .small, #minting-dapp .not-mainnet.not-mainnet .small, #minting-dapp .collection-sold-out.not-mainnet .small {
+	@apply block;
+        @apply text-sm;
+}
+
+#minting-dapp .cannot-mint.collection-sold-out h2, #minting-dapp .not-mainnet.collection-sold-out h2, #minting-dapp .collection-sold-out.collection-sold-out h2 {
+	@apply mb-3;
+      @apply text-xl;
+}
+
+#minting-dapp .mint-widget {
+	@apply flex flex-col items-center;
+    @apply rounded-lg;
+    @apply overflow-hidden;
+    @apply text-popups-txt text-center;
+    @apply bg-popups-bg;
+    @apply shadow;
+}
+
+#minting-dapp .mint-widget .preview {
+	@apply p-8;
+      @apply bg-token_preview;
+}
+
+#minting-dapp .mint-widget .preview img {
+	@apply m-auto;
+        @apply max-h-52;
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+#minting-dapp .mint-widget .price {
+	@apply px-6 py-4;
+}
+
+#minting-dapp .mint-widget > * {
+	@apply w-full;
+}
+
+#minting-dapp .mint-widget > *:not(:last-child) {
+	@apply border-b border-popups-internal_border;
+}
+
+#minting-dapp .mint-widget .controls {
+	@apply flex items-stretch;
+}
+
+#minting-dapp .mint-widget .controls > * {
+	@apply rounded-none;
+        @apply border-0;
+}
+
+#minting-dapp .mint-widget .controls .decrease, #minting-dapp .mint-widget .controls .mint-amount {
+	@apply border-r border-popups-internal_border;
+}
+
+#minting-dapp .mint-widget .controls .mint-amount {
+	@apply flex items-center justify-center;
+        @apply w-full;
+        @apply font-semibold;
+        @apply text-label text-lg;
+}
+
+#minting-dapp .mint-widget .controls .primary {
+	@apply border-0;
+}
+
+/* other.scss */
+
+h1 {
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+nav {
+	display: inline;
+	font-size: 18px;
+	color: white;
+}
+
+#slogan {
+	font-size: 21px;
+	color: white;
+	text-align: center;
+}
+
+#navlink {
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#navlink:hover {
+	background: #1e3a8a;
+	text-decoration: none;
+	border-color: #1e3a8a;
+}
+
+#navimg {
+	float: right;
+	margin-right: 10px;
+	width: 30px;
+}
+
+#boxes {
+	display: flex;
+}
+
+/*#nft_pic {
+	@apply flex flex-col gap-6;
+  @apply mt-6 mx-auto;
+  @apply max-w-md;
+  @apply w-3/12;
+}*/
+
+#nft_pic_img {
+	@apply rounded-lg;
+  height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 1500px) {
+	#div {
+		display: none;
+	}
+
+	#nft_pic {
+		display: block;
+	}
+
+	#boxes {
+		display: block;
+	}
+
+	#nft_pic {
+		@apply w-full;
+	}
+
+	#nft_pic_img {
+		@apply w-full;
+	}
+
+	#minting_dapp {
+		@apply w-full;
+	}
+}
